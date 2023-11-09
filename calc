@@ -1,0 +1,81 @@
+#include <iostream>
+#include <stdio.h>
+#include <cstdlib>
+#include <math.h>
+
+using namespace std;
+
+
+int main()
+{
+    float x, y;
+    int sel;
+
+    cout<<"Welcome in calculator, please provide Your numbers and then choice option."<<endl<<endl<<endl;
+
+
+    for(;;)
+    {
+
+        cout <<"Provide first number: ";
+        cin >> x;
+        cout <<"Provide second number: ";
+        cin >> y;
+
+        cout << "----MAIN MENU----" << endl;
+        cout << "----------------" << endl;
+        cout << "1. Addition" << endl;
+        cout << "2. Subtraction" << endl;
+        cout << "3. Multiplication" << endl;
+        cout << "4. Division" << endl;
+        cout << "5. Exponentiation" << endl;
+        cout << "6. End of program" << endl;
+
+        cout<<"Choice :";
+        cin>>sel;
+
+
+        switch(sel)
+        {
+            case 1:
+            {
+                cout << "it`s: " << x + y <<endl<<endl<<endl;
+            }
+            break;
+
+            case 2:
+                {
+                    cout << "it`s: " << x - y <<endl<<endl<<endl;
+                }
+            break;
+
+            case 3:
+                {
+                    cout << "it`s: " << x * y <<endl<<endl<<endl;
+                }
+            break;
+
+            case 4:
+                {
+                    if (y==0) cout << "You can't divide by zero!" <<endl<<endl<<endl;
+                    else cout << "it`s: " << x / y <<endl<<endl<<endl;
+                }
+            break;
+            case 5:
+                {
+                     cout << "it`s: " << pow(x, y) <<endl<<endl<<endl;
+                }
+            break;
+            case 6:
+                {
+                    exit(0);
+                }
+            break;
+
+            default:cout << "Something went wrong, please try again" <<endl<<endl<<endl;
+        }
+
+    }
+
+    return 0;
+}
